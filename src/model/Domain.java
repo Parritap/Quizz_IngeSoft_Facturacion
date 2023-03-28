@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Domain {
 
-    private ArrayList<Factura> listaFacturas;
-    private ArrayList<Cliente> listaClientes;
+    private ArrayList<Factura> listaFacturas = new ArrayList<>();
+    private ArrayList<Cliente> listaClientes = new ArrayList<>();
 
 
     /**
@@ -25,6 +25,10 @@ public class Domain {
         }
         return auxListaFacturas;
     }
+
+    /* Populamos los datos del Domain*/
+
+
 
 
 
