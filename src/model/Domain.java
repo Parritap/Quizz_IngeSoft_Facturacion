@@ -17,6 +17,7 @@ public class Domain {
      * @return Lista de facturas del cliente especificado.
      */
     public ArrayList<Factura> filtrarFacturasPorNIT (String nit){
+        System.out.println(listaClientes);
 
         ArrayList<Factura> auxListaFacturas = new ArrayList<>();
 

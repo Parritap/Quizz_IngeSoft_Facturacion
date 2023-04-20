@@ -1,0 +1,59 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class App {
+  + App(): 
+}
+class Cliente {
+  + Cliente(String, String, String, String, String): 
+  - nit: String
+  - direccion: String
+  - ciudad: String
+  - telefono: String
+  - nombre: String
+}
+class Detalle {
+  + Detalle(String, String, String, int, float, float, float): 
+  - descripcion: String
+  - iva: float
+  - cantidad: int
+  - valorTotal: float
+  - descuento: float
+  - codigoProducto: String
+  - valorUnitario: String
+}
+class DetalleFactura {
+  + DetalleFactura(): 
+  - listaDetalles: ArrayList<Detalle>
+}
+class Domain {
+  + Domain(): 
+  - listaFacturas: ArrayList<Factura>
+  - listaClientes: ArrayList<Cliente>
+}
+class Factura {
+  + Factura(): 
+  - cliente: Cliente
+  - numero: int
+  - detalleFactura: DetalleFactura
+  - fecha: String
+}
+class Singleton {
+  - Singleton(): 
+  - domain: Domain
+  - instance: Singleton
+}
+
+DetalleFactura "1" *-[#595959,plain]-> "listaDetalles\n*" Detalle        
+Domain         "1" *-[#595959,plain]-> "listaClientes\n*" Cliente        
+Domain         "1" *-[#595959,plain]-> "listaFacturas\n*" Factura        
+Factura        "1" *-[#595959,plain]-> "cliente\n1" Cliente        
+Factura        "1" *-[#595959,plain]-> "detalleFactura\n1" DetalleFactura 
+Singleton       -[#595959,dashed]->  Cliente        : "«create»"
+Singleton       -[#595959,dashed]->  Domain         : "«create»"
+Singleton      "1" *-[#595959,plain]-> "domain\n1" Domain         
+Singleton       -[#595959,dashed]->  Factura        : "«create»"
+@enduml

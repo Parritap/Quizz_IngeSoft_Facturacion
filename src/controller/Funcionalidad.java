@@ -45,12 +45,14 @@ public class Funcionalidad {
 
         // Filter the list of Factura objects by the nit value
         List<Factura> filteredFacturas = this.domain.filtrarFacturasPorNIT(nit);
+        System.out.println(filteredFacturas);
 
         // Clear the existing items in the table
         table.getItems().clear();
 
         // Add the filtered Factura objects to the table
         table.getItems().addAll(filteredFacturas);
+        table.refresh();
     }
 
 
@@ -58,7 +60,7 @@ public class Funcionalidad {
 
     public void initialize() {
         facturas = FXCollections.observableArrayList(domain.getListaFacturas());
-        col_nombreCliente.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        col_nombreCliente.setCellValueFactory(new PropertyValueFactory<>("cliente"));
         col_numeroFactura.setCellValueFactory(new PropertyValueFactory<>("numero"));
         table.setItems(facturas);
     }
