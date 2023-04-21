@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="814.0" prefWidth="581.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cfe8ff" height="35.0" layoutX="41.0" layoutY="612.0" stroke="BLACK" strokeType="INSIDE" width="434.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cfe8ff" height="35.0" layoutX="42.0" layoutY="564.0" stroke="BLACK" strokeType="INSIDE" width="434.0" />
+      <Label layoutX="53.0" layoutY="23.0" prefHeight="32.0" prefWidth="449.0" text="Factura">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TreeTableView layoutX="46.0" layoutY="336.0" prefHeight="200.0" prefWidth="503.0">
+         <columns>
+            <TreeTableColumn prefWidth="108.66667175292969" text="Producto" />
+            <TreeTableColumn prefWidth="70.33332824707031" text="Cantidad" />
+            <TreeTableColumn prefWidth="174.0" text="valorUnitario" />
+            <TreeTableColumn prefWidth="153.0" text="total" />
+         </columns>
+      </TreeTableView>
+      <Label layoutX="67.0" layoutY="573.0" prefHeight="18.0" prefWidth="78.0" text="Total" />
+      <Label layoutX="67.0" layoutY="618.0" text="Subtotal" />
+      <Label layoutX="398.0" layoutY="576.0" prefHeight="18.0" prefWidth="78.0" text="#Total" />
+      <Label layoutX="389.0" layoutY="619.0" text="#subtotal" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cfe8ff" height="35.0" layoutX="51.0" layoutY="123.0" stroke="BLACK" strokeType="INSIDE" width="434.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cfe8ff" height="35.0" layoutX="50.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="434.0" />
+      <Label layoutX="64.0" layoutY="86.0" prefHeight="18.0" prefWidth="155.0" text="Nombre del cliente" />
+      <Label layoutX="64.0" layoutY="131.0" prefHeight="18.0" prefWidth="129.0" text="Nit del cliente" />
+      <TextField layoutX="303.0" layoutY="82.0" promptText="ingresar nombre" />
+      <TextField layoutX="304.0" layoutY="128.0" promptText="ingresar nit cliente" />
+      <Line endX="346.33331298828125" layoutX="202.0" layoutY="180.0" startX="-181.3333282470703" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cfe8ff" height="35.0" layoutX="51.0" layoutY="241.0" stroke="BLACK" strokeType="INSIDE" width="434.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cfe8ff" height="35.0" layoutX="50.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="434.0" />
+      <Label layoutX="64.0" layoutY="204.0" prefHeight="18.0" prefWidth="155.0" text="Producto" />
+      <Label layoutX="64.0" layoutY="249.0" prefHeight="18.0" prefWidth="129.0" text="Cantidad" />
+      <TextField layoutX="304.0" layoutY="246.0" promptText="ingresar nit cliente" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cfe8ff" height="35.0" layoutX="53.0" layoutY="285.0" stroke="BLACK" strokeType="INSIDE" width="434.0" />
+      <Label layoutX="66.0" layoutY="293.0" prefHeight="18.0" prefWidth="129.0" text="Descuento" />
+      <TextField layoutX="306.0" layoutY="290.0" promptText="ingresar nit cliente" />
+      <ChoiceBox layoutX="307.0" layoutY="201.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
